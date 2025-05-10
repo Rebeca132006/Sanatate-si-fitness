@@ -1,0 +1,170 @@
+/* Fonturi moderne suplimentare */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Stiluri generale */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTA3dHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMjEl/MkYxMSUyRjEwJTJGMTQxMjY0MV8xNDEy/NjQxX0dldHR5SW1hZ2VzLTEwMTIzMjM4/NzIuanBnJnc9NzgwJmg9NDQwJmhhc2g9/NjU1YjczZTEwMzc2NDQ5ZTJlYzEyMDFkYzJiY2EwN2I=.thumb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #f47f9c;
+}
+
+/* Meniu de navigare */
+nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f47f9c;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff6f91;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Secțiuni */
+section {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #f47f9c;
+}
+
+/* Titlul secțiunii */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Textul descriptiv */
+#acasa p {
+    margin-top: 30px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Tabelul */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4a8c8;
+}
+
+/* Chestionar */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.question {
+    background-color: #ffeef5;
+    padding: 20px;
+    border-left: 5px solid #f47f9c;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+}
+
+.answers input {
+    margin-right: 10px;
+}
+
+.answers label {
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+/* Buton trimite */
+.submit-btn {
+    background-color: #f47f9c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: start;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ff6f91;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #888;
+}
+img {
+  margin: 20px; border: 2px solid pink;/* spațiu exterior în jurul imaginii */
+}
+
+iframe {
+display: flex;
+  justify-content: center;  
+  margin: 10px;
+}

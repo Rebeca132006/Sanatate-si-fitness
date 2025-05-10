@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina principală Sănătate și Fitness">
+    <title>Sănătate și fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ravie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Bine ai venit pe site-ul nostru despre Sănătate și Fitness!</h1>
+</header>
+
+<nav>
+    <a href="index.html">Acasă</a>
+    <a href="alimentatie.html">Alimentație</a>
+    <a href="antrenamente.html">Antrenamente</a>
+    <a href="statistici.html">Statistici</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <!-- Descrierea sănătății fizice și psihice -->
+    <section id="acasa">
+        <h2>Despre Sănătatea Fizică și Psihică</h2>
+        <p>
+     <img src=https://cdn.pixabay.com/photo/2015/08/02/14/27/vitamin-b-871135_1280.jpg width="300" height="225" align="left">
+<br>Este esențial să acordăm o atenție deosebită sănătății fizice și mentale. Aceste două aspecte sunt interdependente și, în mod ideal, ar trebui să le îngrijim pe amândouă pentru a trăi o viață echilibrată și sănătoasă. Exercițiile fizice regulate, cum ar fi alergarea, înotul sau chiar mersul pe jos, ajută la îmbunătățirea stării de spirit și reduc nivelul de stres. De asemenea, activitățile care ne mențin mintea activă, cum ar fi meditația sau jocurile de gândire, pot reduce riscul de tulburări mentale și îmbunătățesc concentrarea.
+<img src=https://cdn.pixabay.com/photo/2015/08/14/10/02/yogurt-888241_1280.jpg width="300" height="225" align="right">
+
+</p>
+        <p>Un alt factor important în menținerea unei sănătăți bune este alimentația corectă. O dietă echilibrată, care include o varietate de legume, fructe, proteine sănătoase și carbohidrați complecși, contribuie la întărirea sistemului imunitar și la menținerea unei greutăți corporale sănătoase. Pe lângă aceasta, un somn odihnitor și gestionarea corectă a emoțiilor joacă un rol semnificativ în prevenirea tulburărilor de sănătate mentală.
+
+<img src=https://www.sursadesanatate.ro/imagini/mari/fitnesssisanatate1454433368-1454452674.jpg  width="300" height="225" align="left">
+
+</p>
+        <p><br>În concluzie, sănătatea fizică și mentală nu sunt doar condiții esențiale pentru o viață lungă, ci și pentru o viață de calitate, plină de energie și fericire. Menținerea unui echilibru între acestea două ar trebui să fie un obiectiv continuu, care să ne ghideze alegerile zilnice.
+ </p>   
+
+<div><p><br></p></div>
+
+<div><br></div>
+
+<div><br><br>
+
+
+  <h2 align="center">🧠 Test: Cât știi despre fitness?</h2>
+
+  <form id="testForm">
+    <div class="card">
+      <p>1. Care este durata recomandată pentru exercițiile fizice moderate, conform OMS?</p>
+      <label><input type="radio" name="q1" value="a" required>30 minute pe lună</label>
+      <label><input type="radio" name="q1" value="b">75 minute pe săptămână</label>
+      <label><input type="radio" name="q1" value="c">150 minute pe săptămână</label>
+    </div>
+
+    <div class="card">
+      <p>2. Ce nutrient este esențial pentru regenerarea musculară?</p>
+      <label><input type="radio" name="q2" value="a" required>Proteine</label>
+      <label><input type="radio" name="q2" value="b">Carbohidrați</label>
+      <label><input type="radio" name="q2" value="c">Grăsimi</label>
+    </div>
+
+    <div class="card">
+      <p>3. Câtă apă este recomandat să bei zilnic în medie?</p>
+      <label><input type="radio" name="q3" value="a" required>1 litru</label>
+      <label><input type="radio" name="q3" value="b">2 litri</label>
+      <label><input type="radio" name="q3" value="c">5 litri</label>
+    </div>
+
+    <button type="button" onclick="verificaTest()">✅ Trimite Răspunsurile</button>
+  </form>
+</div>
+  <div id="rezultat"></div>
+
+  <script>
+    function verificaTest() {
+      const raspunsuriCorecte = {
+        q1: "c",
+        q2: "a",
+        q3: "b"
+      };
+
+      const mesaje = {
+        q1: {
+          a: "✖️ Prea puțin! 30 de minute pe lună nu aduc beneficii reale.",
+          b: "➖ Mai bine decât nimic, dar tot sub nivelul recomandat.",
+          c: "✅ Corect! 150 de minute pe săptămână este recomandarea oficială."
+        },
+        q2: {
+          a: "✅ Corect! Proteinele ajută la refacerea mușchilor după efort.",
+          b: "✖️ Carbohidrații oferă energie, dar nu ajută direct la refacere.",
+          c: "✖️ Grăsimile sunt importante, dar nu pentru regenerare musculară."
+        },
+        q3: {
+          a: "✖️ 1 litru este insuficient pentru majoritatea adulților.",
+          b: "✅ Corect! 2 litri este valoarea recomandată medie.",
+          c: "✖️ 5 litri pot fi prea mult și chiar periculos pentru sănătate."
+        }
+      };
+
+      const form = document.forms["testForm"];
+      let output = "";
+
+      for (let intrebare in raspunsuriCorecte) {
+        const raspuns = form[intrebare].value;
+        output += `<p><strong>Întrebarea ${intrebare.slice(1)}:</strong> ${mesaje[intrebare][raspuns]}</p>`;
+      }
+
+      document.getElementById("rezultat").innerHTML = output;
+    }
+  </script>
+
+</body>
+
+</html>
